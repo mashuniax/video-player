@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="section video">
+        <h2 class="section-title"><span class="lang" data-name="video">Video</span></h2>
+        <div class="wrapper">
+            <div id='player_wrapper' class="video-player">
+                <video id='video_player'>
+                    <source src='./assets/video/video.mp4' type='video/mp4'>
+                </video>
+                <input type="image" src="./assets/svg/play-btn.svg" onclick="play_vid_btn()" id="play_button_lg" class="play-btn">
+                <div class='player-controls'>
+                    <div class="play-pause">
+                        <input type="image" src="./assets/svg/play.svg" onclick="play_vid()" id="play_button">
+                        <input type="image" src="./assets/svg/pause.svg" onclick="pause_vid()" id="pause_button">
+                    </div>
+
+                    <figcaption>
+                       
+                        <progress id="progress" max="100" value="0">Progress</progress>
+                    </figcaption>
+                    <div class="volume-block">
+                        <img src="./assets/svg/volume.svg" onclick="volume_btn()" id="vol_img">
+                        <img src="./assets/svg/mute.svg" onclick="mute_btn()" id="mute_img">
+
+                        <input type="range" id="change_vol" onchange="change_vol()" step="0.05" min="0" max="1" value="1">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-block">
+                <div class="footer-info">
+                    <p>©</p>
+                    <p>2022</p>
+                    <a href="https://github.com/mashuniax">github</a>
+                </div>
+                <div class="footer-name">
+                    <a href="https://rs.school/js-stage0/">Rolling Scopes School</a>
+                </div>
+                <ul class="footer-links">
+                    <li>
+                        <a href="#" class="social-btn-item icon-instagram"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-btn-item icon-facebook"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-btn-item icon-twitter"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-btn-item icon-pinterest"></a>
+                    </li>
+                </ul>           
+
+            </div>
+
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
